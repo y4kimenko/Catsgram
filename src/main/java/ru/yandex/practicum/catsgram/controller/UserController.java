@@ -8,7 +8,7 @@ import ru.yandex.practicum.catsgram.service.UserService;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/users")
 public class UserController {
     private final UserService userService;
 
