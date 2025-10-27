@@ -42,7 +42,7 @@ public class UserService {
     }
 
     public User update(User newUser) {
-        if (newUser == null || newUser.getId() == null) {
+        if (newUser.getId() == null) {
             throw new ConditionsNotMetException("Id должен быть указан");
         }
 
@@ -92,6 +92,10 @@ public class UserService {
         return oldUser;
     }
 
+    public User getUserById(long id) {
+        return users.get(id);
+    }
+
     // если всё же оставляешь вспомогательную валидацию
     private void validateUser(User user) {
         // главная правка – сначала проверяем на null
@@ -104,7 +108,6 @@ public class UserService {
             user.setUsername(email.trim());
         }
     }
-
 
 
     private long getNextId() {
