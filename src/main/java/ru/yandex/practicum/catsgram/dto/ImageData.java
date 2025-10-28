@@ -1,4 +1,4 @@
-package ru.yandex.practicum.catsgram.model;
+package ru.yandex.practicum.catsgram.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
